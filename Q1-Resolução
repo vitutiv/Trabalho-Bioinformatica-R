@@ -1,5 +1,7 @@
-setwd("G:/Meu Drive/Tarefas_4ºsem2021/Fundamentos de Bioinformática/Trabalho-Bioinformatica-R")
-list <- list.files(pattern="filtro")
-datalist = lapply(list, function(x)read.table(x, header=T)) 
+setwd("C:/Users/jterr/Documents/USP trabalhos/FIgenomica/Trabalho-Bioinformatica-R")
+lista <- list.files(pattern="filtro")
+datalist = lapply(lista, function(x)read.table(x, skip=5, header=T)) 
 datafr = do.call("rbind", datalist) 
-plot(datafr$Wavelength.nm., datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") #corrigir, gráfico de pontos (geom_line)
+plot(datafr$Wavelength.nm., datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") 
+#corrigir, gráfico de pontos (geom_line)
+
