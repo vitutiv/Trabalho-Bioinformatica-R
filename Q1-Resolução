@@ -2,6 +2,7 @@ setwd("C:/Users/jterr/Documents/USP trabalhos/FIgenomica/Trabalho-Bioinformatica
 lista <- list.files(pattern="filtro")
 datalist = lapply(lista, function(x)read.table(x, skip=5, header=T)) 
 datafr = do.call("rbind", datalist) 
-plot(datafr$Wavelength.nm., datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") 
+plot( x=datafr$Wavelength.nm., y=datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") 
+lines(x=datafr$Wavelength.nm., y=datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade", col="red") 
 #corrigir, gráfico de pontos (geom_line)
 
