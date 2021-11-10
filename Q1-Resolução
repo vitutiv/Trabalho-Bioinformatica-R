@@ -4,5 +4,5 @@ datalist = lapply(lista, function(x)read.table(x, skip=5, header=T))
 datafr = do.call("rbind", datalist) 
 plot( x=datafr$Wavelength.nm., y=datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade") 
 lines(x=datafr$Wavelength.nm., y=datafr$Intensity, xlab = "comprimento de onda(nm)", ylab = "intensidade", col="red") 
-#corrigir, gráfico de pontos (geom_line)
+#corrigir, grafico de pontos (geom_line)
 
