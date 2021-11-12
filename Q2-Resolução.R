@@ -9,25 +9,15 @@ pacientes_ER_pos=dados_paciente[dados_paciente$ER_IHC=="pos",]
 pacientes_ER_neg=dados_paciente[dados_paciente$ER_IHC=="neg",]
 c=0
 for (i in 1:1867) {
-  if (pacientes_ER_pos$PATIENT_ID==names(genes_expre)[i])
+  if (pacientes_ER_pos$PATIENT_ID[i]==names(genes_expre)[i])
   {
-    c=c+1
-    print(c)
+      genes_ER_pos<-genes_expre[]
+  }
+  else
+  {
+      genes_ER_neg<-
   }
 }
 
-t.test(genes_expre, dados_pacie)
+t.test(genes_ER_pos, genes_ER_neg)
 
-#if (pacientes_ER_pos$PATIENT_ID[i]==dados_paciente$PATIENT_ID[i]) {
-#  for(j in 1:45)
-#  {
-#   genes_ER_pos<-matrix_gene_expre[i,j]
-#  }
-#}
-#else
-#{
- # for(j in 1:45)
-  #{
-   # genes_ER_neg<-matrix_gene_expre[i,j]
-  #}
-#}
