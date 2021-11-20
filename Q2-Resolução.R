@@ -11,7 +11,7 @@ c=0
 for (i in 1:1867) {
   if (pacientes_ER_pos$PATIENT_ID[i]==names(genes_expre)[i])
   {
-      genes_ER_pos<-genes_expre[]
+      genes_ER_neg<-genes_expre[-genes_expre[i]]
   }
   else
   {
